@@ -946,8 +946,8 @@ section {
    フッター
 ======================================== */
 .footer {
-  background: var(--color-text);
-  color: var(--color-white);
+  background: var(--color-bg);
+  color: var(--color-text);
   padding: 60px 0 100px;
 }
 
@@ -966,11 +966,11 @@ section {
 }
 
 .footer-logo .logo-text {
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .footer-logo .logo-sub {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-light);
 }
 
 .footer-tagline {
@@ -994,13 +994,12 @@ section {
 
 .footer-links a {
   font-size: 0.9rem;
-  opacity: 0.8;
+  color: var(--color-text-light);
   transition: var(--transition);
 }
 
 .footer-links a:hover {
-  opacity: 1;
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .footer-copy {
