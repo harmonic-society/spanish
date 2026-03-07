@@ -629,6 +629,24 @@ section {
   line-height: 1.6;
 }
 
+.plan-class-features {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  text-align: left;
+}
+
+.plan-class-features li {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.plan-class-features li:last-child {
+  border-bottom: none;
+}
+
 .class-type-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -825,6 +843,27 @@ section {
   color: var(--color-primary);
 }
 
+.gogachalle-box {
+  background: var(--color-accent);
+  color: var(--color-white);
+  padding: 32px 40px;
+  border-radius: var(--radius-md);
+  max-width: 600px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.gogachalle-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.gogachalle-detail {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
 .trial-box {
   background: var(--color-white);
   padding: 48px;
@@ -862,6 +901,62 @@ section {
   font-size: 0.95rem;
   color: var(--color-text-light);
   margin-bottom: 24px;
+}
+
+/* ========================================
+   受講の流れセクション
+======================================== */
+.enrollment-flow {
+  padding: 80px 0;
+}
+
+.enrollment-steps {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.enrollment-step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.enrollment-step::after {
+  content: '→';
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.enrollment-step:last-child::after {
+  display: none;
+}
+
+.enrollment-step-number {
+  width: 48px;
+  height: 48px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.enrollment-step-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
 }
 
 /* ========================================
@@ -1165,6 +1260,20 @@ section {
     left: 50%;
     top: auto;
     bottom: -18px;
+    transform: translateX(-50%);
+  }
+
+  .enrollment-steps {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .enrollment-step::after {
+    content: '↓';
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: -20px;
     transform: translateX(-50%);
   }
 
